@@ -1,19 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEEEEE"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    lay
 
-    <fragment
-        android:id="@+id/nav_host_fragment_content_main"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />
+    <ImageView
+        android:id='@+id/iv'
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/avatar"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <LinearLayout
+        android:id="@+id/number_11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:text="账号:"
+        android:textColor="#000"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/tv_number"
+        android:background="@null"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_number"
+        app:layout_constraintStart_toEndOf="@+id/tv_number"
+        app:layout_constraintTop_toTopOf="@+id/tv_number" />
+    <LinearLayout
+        android:id="@+id/password_11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number_11"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/tv_password"
+        android:background="@null"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_password"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:text="密码:"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_password"
+        app:layout_constraintTop_toTopOf="@+id/et_password"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="23dp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="180dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/password_11"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="#3C8DC4"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="353dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
